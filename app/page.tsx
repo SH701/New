@@ -7,12 +7,12 @@ export default function Home() {
       {/* 데스크톱: 배경 이미지와 임베드 */}
       <div className="hidden md:block relative pt-5 w-full h-full">
         <Image
-          src="/wrpper2.png"
+          src="/wrapper2.png"
           alt="배경"
           fill
           className="object-cover -z-10"
         />
-        <div className="z-10 absolute right-4 top-4 lg:right-10 lg:top-8">
+        <div className="z-10 absolute right-4 top-4 lg:right-50 lg:top-18">
           <div
             className="bg-black rounded-lg overflow-hidden shadow-2xl"
             style={{
