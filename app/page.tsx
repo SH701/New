@@ -3,22 +3,31 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="relative w-screen h-screen">
+    <div className="relative w-screen h-screen overflow-hidden">
       {/* 데스크톱: 배경 이미지와 임베드 */}
-      <div className="hidden md:block relative pt-5 w-full h-full">
+      <div className="hidden md:flex relative w-full h-full items-start justify-end">
         <Image
           src="/wrapper2.png"
           alt="배경"
           fill
           className="object-cover -z-10"
         />
-        <div className="z-10 absolute right-4 top-4 lg:right-50 lg:top-18">
+        <div
+          className="z-10"
+          style={{
+            position: "absolute",
+            right: "max(2rem, min(14rem, calc(100vw - 375px - 2rem)))",
+            top: "max(2rem, min(3.5rem, calc(100vh - 812px - 2rem)))",
+          }}
+        >
           <div
             className="bg-black rounded-lg overflow-hidden shadow-2xl"
             style={{
-              width: "min(375px, 40vw)",
-              height: "min(812px, calc(40vw * 812 / 375))",
+              width: "min(375px, calc(100vw - 4rem))",
+              height: "min(812px, calc(100vh - 4rem))",
               aspectRatio: "375 / 812",
+              maxWidth: "375px",
+              maxHeight: "812px",
             }}
           >
             <EmbedPage url="https://noonchi.ai.kr" />
